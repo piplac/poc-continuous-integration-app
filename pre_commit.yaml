@@ -1,4 +1,4 @@
 hooks:
-  format: true
-  analyze: true
-  test: true
+  - format
+  - analyze
+  - test
