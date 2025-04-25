@@ -1,4 +1,0 @@
-hooks:
-  - format
-  - analyze
-  - test
