@@ -1,4 +1,0 @@
-hooks:
-  format: true # Automatically formats code
-  analyze: true # Runs `dart analyze` to check for issues
-  test: true # Runs unit tests before allowing a commit

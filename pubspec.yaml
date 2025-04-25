@@ -20,3 +20,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  dart_pre_commit:
+    hooks:
+      format: true
+      analyze: true
+      test: true
