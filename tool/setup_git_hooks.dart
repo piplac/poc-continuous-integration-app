@@ -5,7 +5,7 @@ Future<void> main() async {
   await preCommitHook.parent.create();
   await preCommitHook.writeAsString('''
 #!/bin/sh
-exec flutter pub run dart_pre_commit
+exec dart run dart_pre_commit
 ''');
 
   if (!Platform.isWindows) {
