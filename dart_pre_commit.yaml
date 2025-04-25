@@ -1,0 +1,4 @@
+hooks:
+  format: true
+  analyze: true
+  test: true
