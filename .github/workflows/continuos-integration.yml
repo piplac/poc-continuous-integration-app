@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  coverage_threshold: 70
+
 jobs:
   build:
     name: Build and Test
@@ -31,6 +34,17 @@ jobs:
 
       - name: Run tests
         run: flutter test
+
+      - name: Setup LCOV
+        uses: hrishikesh-kadam/setup-lcov@v1
+
+      - name: Report Code Coverage
+        uses: zgosalvez/github-actions-report-lcov@v4
+        with:
+          coverage-files: coverage/lcov.info
+          minimum-coverage: ${{env.coverage_threshold}}
+          artifact-name: code-coverage-report
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build APP
         run: flutter build apk --debug
